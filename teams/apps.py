@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class TeamsappConfig(AppConfig):
+class TeamsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'teamsApp'
+    name = 'teams'
