@@ -1,9 +1,9 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
+from .models import Team, Member
+from .forms import NameForm
 
 # Create your views here.
-
-from .forms import NameForm
 
 def get_name(request):
     # if this is a POST request we need to process the form data
@@ -22,3 +22,6 @@ def get_name(request):
         form = NameForm()
 
     return render(request, 'name.html', {'form': form})
+
+def thanks(request):
+    return render(request, 'thanks.html')
