@@ -25,8 +25,8 @@ def get_name(request):
 
     return render(request, 'name.html', {'form': form})
 
-def your_name(request):
-    template = loader.get_template('your_name.html')
+def yourname(request):
+    template = loader.get_template('yourname.html')
     return HttpResponse(template.render({}, request))
 
 def thanks(request):
