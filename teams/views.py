@@ -1,5 +1,7 @@
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
+from django.template import loader
+from django.urls import reverse
 from .models import Team, Member
 from .forms import NameForm
 
@@ -22,6 +24,10 @@ def get_name(request):
         form = NameForm()
 
     return render(request, 'name.html', {'form': form})
+
+def your_name(request):
+    template = loader.get_template('your_name.html')
+    return HttpResponse(template.render({}, request))
 
 def thanks(request):
     return render(request, 'thanks.html')

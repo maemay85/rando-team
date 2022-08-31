@@ -1,4 +1,18 @@
-<form action="/your-name/" method="post">
-  {% csrf_token %} {{ form }}
-  <input type="submit" value="Submit" />
-</form>
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <title>Call Me Maybe</title>
+  <link rel="stylesheet" href="{% static 'teams/style.css' %}">
+
+
+  <body>
+    <h1> Sign Up for the group! </h1>
+    <h2> Everybody loves to be a part of a group :) </h2>
+    <br><br>
+    <form action="/your-name/" method="post">
+      {% csrf_token %} {{ form }}
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+
+</html>
